@@ -7,7 +7,14 @@
   </GridLayout>
 </ActionBar>
 
-<GridLayout class="page__content">
-  <Label class="page__content-icon fas" text="&#xf015;"></Label>
-  <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
-</GridLayout>
+
+<GridLayout columns="*" rows="auto, auto, auto">
+  <Button text="Click here to greet" class="-primary" color='gray' 
+ (tap)='onButtonTap($event)' row='1' column='0'></Button>
+  <Label [text]='this.user.name' row='2' column='0'
+  height="50px" textAlignment='center' 
+  style='font-size: 16px; font-weight: bold;'></Label>
+  <label [text]='this.user.id' row='*' column='*' height="50px" textAlignment='center'
+  style='font-size: 16px; font-weight: bold'></label>
+ </GridLayout>
+ 
