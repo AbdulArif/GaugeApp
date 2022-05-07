@@ -7,8 +7,8 @@
   </GridLayout>
 </ActionBar>
 
-
-<GridLayout columns="*" rows="auto, auto, auto">
+<!-- ......................One-Way Data Binding............................................. -->
+<!-- <GridLayout columns="*" rows="auto, auto, auto">
   <Button text="Click here to greet" class="-primary" color='gray' 
  (tap)='onButtonTap($event)' row='1' column='0'></Button>
   <Label [text]='this.user.name' row='2' column='0'
@@ -16,5 +16,13 @@
   style='font-size: 16px; font-weight: bold;'></Label>
   <label [text]='this.user.id' row='*' column='*' height="50px" textAlignment='center'
   style='font-size: 16px; font-weight: bold'></label>
+ </GridLayout> -->
+ <!-- .................Two-way Data Binding..................... -->
+
+ <GridLayout columns="*" rows="auto, auto">
+  <TextField hint="Username" row='0' column='0' color="gray" backgroundColor="lightyellow" height="75px"
+  [(ngModel)]='this.user.name' style='font-size: 20px; font-weight: bold'></TextField>
+  <Label [text]='this.user.name' row='1' column='0' height="50px" textAlignment='center' 
+  style='font-size: 16px; font-weight: bold; margin: 0px 32px 0  25px;'></Label>
  </GridLayout>
  
